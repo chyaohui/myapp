@@ -8,6 +8,10 @@ import 'package:myapp/chat/chat_list_page.dart';
 import 'package:myapp/chat/chat_messages_page.dart';
 import 'package:myapp/content/content_main_page.dart';
 import 'package:myapp/content/image_text_pager.dart';
+import 'package:myapp/flare/simple/simple_page.dart';
+import 'package:myapp/flare/slider/slider_page.dart';
+import 'package:myapp/flare/space/refresh_control.dart';
+import 'package:myapp/flare/teddy/teddy_page.dart';
 import 'package:myapp/login/login_form_one.dart';
 import 'package:myapp/login/login_form_two.dart';
 import 'package:myapp/login/login_main.dart';
@@ -55,6 +59,9 @@ import 'content/detail_screen_page_two.dart';
 import 'content/invite_list_page.dart';
 import 'content/popular_courses_home_page.dart';
 import 'content/user_list_page.dart';
+import 'flare/flare_main_page.dart';
+import 'flare/guss/guss_page.dart';
+import 'flare/penguin_dance/penguin_page.dart';
 import 'login/contact_us_form.dart';
 import 'login/login_form_type_four.dart';
 import 'login/login_form_type_three.dart';
@@ -81,6 +88,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Montserrat',
           primarySwatch: Colors.blue,
           primaryColor: persian_blue),
+      // home: MyHomePage(title: 'Contra Flutter Kit Demo'),
       home: MyHomePage(title: 'Contra Flutter Kit Demo'),
       routes: {
         '/onboard_all': (context) => OnboardPageMain(),
@@ -130,11 +138,11 @@ class MyApp extends StatelessWidget {
         '/weather_page': (context) => WeatherDetailPage(),
         '/chart_main_page': (context) => ChartMainPage(),
         '/bar_chart_page': (context) => ChartsPage(
-          isBarChart: true,
-        ),
+              isBarChart: true,
+            ),
         '/line_chart_page': (context) => ChartsPage(
-          isBarChart: false,
-        ),
+              isBarChart: false,
+            ),
         '/map_main_page': (context) => LocationMapMainPage(),
         '/location_list_page': (context) => LocationListingPage(),
         '/location_detail_page': (context) => LocationDetailPage(),
@@ -155,6 +163,13 @@ class MyApp extends StatelessWidget {
         '/settings_type_one': (context) => SettingsPageOne(),
         '/settings_type_two': (context) => SettingsPageTwo(),
         '/settings_type_three': (context) => SettingsPageThree(),
+        '/flare_animation': (context) => FlareMainPage(),
+        '/flare_penguin': (context) => PnguinPage(),
+        '/flare_teddy': (context) => TeddyPage(),
+        '/flare_guss': (context) => GussPage(),
+        '/flare_space': (context) => CupertinoRefreshControlDemo(),
+        '/flare_slider': (context) => SliderPage(),
+        '/flare_simple': (context) => FlareSimplePage(title: 'Flare-Flutter'),
       },
     );
   }
@@ -281,7 +296,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
-/*              Container(
+              Container(
                 child: ListTile(
                   contentPadding: EdgeInsets.all(20),
                   trailing: Icon(Icons.navigate_next),
@@ -295,9 +310,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListTile(
                   contentPadding: EdgeInsets.all(20),
                   trailing: Icon(Icons.navigate_next),
-                  title: Text("Profile"),
+                  title: Text("Flare Animation"),
                   onTap: () {
-                    Navigator.pushNamed(context, "/empty_state");
+                    Navigator.pushNamed(context, "/flare_animation");
                   },
                 ),
               ),
@@ -318,7 +333,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   Navigator.pushNamed(context, "/empty_state");
                 },
-              )*/
+              )
             ],
           ),
         ),
