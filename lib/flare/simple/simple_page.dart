@@ -33,12 +33,14 @@ class _SimplePageState extends State<FlareSimplePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Expanded(
-                child: FlareActor("assets/rive/Filip.flr",
+            Container(
+                height: 300,
+                padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+                child: FlareActor("assets/rive/Filip.flr", //Animals.flr"
                     alignment: Alignment.center,
-                    isPaused: false,
+                    isPaused: _useAA,
                     fit: BoxFit.cover,
-                    animation: "walk")),
+                    animation: _animationName)),
             // child: FlareCacheBuilder(
             //   [asset],
             //   builder: (BuildContext context, bool isWarm) {

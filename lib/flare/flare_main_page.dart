@@ -73,6 +73,16 @@ class _FlareMainPageState extends State<FlareMainPage> {
                 },
               ),
             ),
+            Container(
+              child: ListTile(
+                contentPadding: EdgeInsets.all(20),
+                trailing: Icon(Icons.navigate_next),
+                title: Text("Heart"),
+                onTap: () {
+                  Navigator.pushNamed(context, "/flare_heart");
+                },
+              ),
+            ),
           ],
         ),
       ),

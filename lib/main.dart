@@ -8,6 +8,7 @@ import 'package:myapp/chat/chat_list_page.dart';
 import 'package:myapp/chat/chat_messages_page.dart';
 import 'package:myapp/content/content_main_page.dart';
 import 'package:myapp/content/image_text_pager.dart';
+import 'package:myapp/flare/favorite/favorite_page.dart';
 import 'package:myapp/flare/simple/simple_page.dart';
 import 'package:myapp/flare/slider/slider_page.dart';
 import 'package:myapp/flare/space/refresh_control.dart';
@@ -170,6 +171,9 @@ class MyApp extends StatelessWidget {
         '/flare_space': (context) => CupertinoRefreshControlDemo(),
         '/flare_slider': (context) => SliderPage(),
         '/flare_simple': (context) => FlareSimplePage(title: 'Flare-Flutter'),
+        '/flare_heart': (context) => Heart(),
+        '/flare_change_color': (context) => Heart(),
+        '/flare_checkbox': (context) => Heart(),
       },
     );
   }
